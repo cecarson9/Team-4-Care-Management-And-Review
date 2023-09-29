@@ -5,7 +5,7 @@
 - Matthew Morena, _Data Architect_
 - Himanshu Tomar, _UI/UX Development_
 - Devansh Guduri, _Microservices Developer_
-- Sanjana Kancharia, _Quality & Dev Ops_
+- Sanjana Kancharla, _Quality & Dev Ops_
 
 ## Product Vision
 ### Far Vision
