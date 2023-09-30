@@ -138,5 +138,5 @@ The stories were ordered as they were because the databases needed to be set up 
     * The patient should be able to go to the dashboard and view billing information based on the corresponding dates from the calendar.
     * 2 Story Points
 
-## Relative Sizing Estimating
-We conducted relative sizing estimating as a team using the three-point method.
+## Relative Size Estimating
+We conducted relative size estimating as a team using the three-point method.
