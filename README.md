@@ -88,6 +88,7 @@ The stories were ordered as they were because the databases needed to be set up 
    * Case managers should see a list of their active patients to select from.
    * There should be also be filtering options (alphabebital, most recently viewed, etc.).
    * Upon selecting a patient, the case manager should be redirected to the progress dashboard for the selected patient.
+   * 1 Story Point
 4. Develop Case Manager Selection Page for Agency Staff
    * As an Agency Manager, I should be able to view a list of active case managers and select one to view their patients.
    * Agency managers should see a list of active case managers to select from.
