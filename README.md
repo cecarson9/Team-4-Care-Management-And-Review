@@ -50,10 +50,10 @@ Backoffice (Reporting) | Caregiver
 
 **Name:** Emily Davis
 
-**Role:** Care Manager
+**Role:** Case Manager
 
 **Background:**
-Emily Davis is an experienced care manager at an Independent Living Center (ILC). She has been in the healthcare industry for over 10 years and is dedicated to helping individuals with disabilities lead independent lives. Emily is responsible for overseeing the care and progress of consumers at the ILC. She plays a vital role in coordinating services, setting goals, and ensuring that consumers receive the support they need to achieve their objectives.
+Emily Davis is an experienced case manager at an Independent Living Center (ILC). She has been in the healthcare industry for over 10 years and is dedicated to helping individuals with disabilities lead independent lives. Emily is responsible for overseeing the care and progress of consumers at the ILC. She plays a vital role in coordinating services, setting goals, and ensuring that consumers receive the support they need to achieve their objectives.
 
 **Goals and Needs:**
 * Efficient Progress Monitoring: Emily needs a tool that allows her to quickly review the progress of individual consumers. She wants to see a snapshot of each patient's demographic information, upcoming appointments, case notes, and recent activity to efficiently assess their current status.
@@ -71,7 +71,7 @@ Emily Davis is an experienced care manager at an Independent Living Center (ILC)
 ### Link
 https://www.pivotaltracker.com/n/projects/2678447
 ### Ordering
-The stories were ordered as they were because the databases needed to be set up first which explains the need for developing the entities and ER diagram first. Then the REST APIs need to be set up before any other features can be added to either the front or back end. The progress panel then will be next because the progress panel is the most essential aspect of the care management / review team. We then put an emphasis and priority on the Care Manager before anything appears on the patient side dashboard because the care managers need to be able to access and set anything up before assisting patients.
+The stories were ordered as they were because the databases needed to be set up first which explains the need for developing the entities and ER diagram first. Then the REST APIs need to be set up before any other features can be added to either the front or back end. The progress panel then will be next because the progress panel is the most essential aspect of the case management / review team. We then put an emphasis and priority on the Case Manager before anything appears on the agency manager side dashboard because the case managers need to be able to access and set anything up before assisting patients.
 ### Defintion of Ready
 1. Define Entities, Capture Relationships, and Design ER Diagram
     * As a Data Architect, I want to define the relevant entities and capture their relationships so that I can design an Entity-Relationship (ER) diagram for the system.
@@ -83,59 +83,72 @@ The stories were ordered as they were because the databases needed to be set up 
     * Functions are able to access data stored in the database (Create, Read, Update, Delete).
     * API Documentation is available to other services.
     * 3 Story Points
-3. Develop Progress Panel on User Dashboard
-    * As a Care Manager, I should be able to access progress from recent visits of a patient with a single click.
+3. Develop Patient Selection Page for Case Manager
+   * As a Case Manager, I should be able to view a list of active patients under my care and select one to view and update their progress.
+   * Case managers should see a list of their active patients to select from.
+   * There should be also be filtering options (alphabebital, most recently viewed, etc.).
+   * Upon selecting a patient, the case manager should be redirected to the progress dashboard for the selected patient.
+4. Develop Case Manager Selection Page for Agency Staff
+   * As an Agency Manager, I should be able to view a list of active case managers and select one to view their patients.
+   * Agency managers should see a list of active case managers to select from.
+   * There should be also be filtering options (alphabebital, most recently viewed, etc.).
+   * Upon selecting a case manager, the agency manager should be redirected to the patient selection page.
+   * 1 Story Point
+5. Develop Patient Selection Page for Agency Staff
+   * As an Agency Manager, I should be able to view a list of active patient’s under a selected case manager’s care and select one to view their progress.
+   * Upon selecting a case manager, the agency manager should be able to select from that case manager's active patients.
+   * There should be also be filtering options (alphabebital, most recently viewed, etc.).
+   * Upon selecting a patient, the agency manager should be redirected to the progress dashboard for the selected patient.
+   * 1 Story Point
+6. Develop Progress Panel on User Dashboard
+    * As a Case Manager, I should be able to access progress from recent visits of a patient with a single click.
     * It should have a visits panel and have a clear way of accessing progress from patients.
     * All patient progress is stored in the progress panel on the user dashboard.
     * 3 Story Points
-4. Develop Progress Details Chart / Case Manager Form on User Dashboard
-    * As a Care Manager, I should be able to create, read, update and delete the progress details of an individual.
+7. Develop Progress Details Chart / Case Manager Form on User Dashboard
+    * As a Case Manager, I should be able to create, read, update and delete the progress details of an individual.
     * Chart and Form is available on the Case Manager page with fields detailing progress for patients.
     * Case Managers should be able to click on individual patients to bring up progress charts and forms.
     * Fields include: Patient Name, Demographic info, referrals, past visits, upcoming visits, dates, locations and time spent on all individual case management activities.
     * 3 Story Points
-5. Develop Prescription Update Form for Care Manager
-    * As a Care Manager, I should be able to update prescription information for patients.
+8. Develop Prescription Update Form for Case Manager
+    * As a Case Manager, I should be able to update prescription information for patients.
     *  The case manager should be able to update a prescriptions name, label# and date and should also be able to view any comments from the patients about their reaction to the drug.
     * 1 Story Point
-6. Develop Exit Plan Form for Care Manager
-    * As a Care Manager, I should be able to create and update exit plans for patients.
-    * Exit plan form is available to the care manager for each individual patient under their care.
-    * Care managers should be able to click on a particular patient to bring up their exit plan information.
-    * Care manager should be able to update the fields in the form for each patient and submit the form to the database.
+9. Develop Exit Plan Form for Case Manager
+    * As a Case Manager, I should be able to create and update exit plans for patients.
+    * Exit plan form is available to the case manager for each individual patient under their care.
+    * Case managers should be able to click on a particular patient to bring up their exit plan information.
+    * Case manager should be able to update the fields in the form for each patient and submit the form to the database.
     * Fields include: participant objectives and goals, resources such as further referrals or prescriptions
-    * Any past exit plan information should be able to be viewed and updated by the care manager.
+    * Any past exit plan information should be able to be viewed and updated by the case manager.
     * 2 Story Points
-7. Create Billing Chart / Table for Care Manager Side
-    * As a Care Manager, I should be able to update billing information for patients for their recent visits.
-    * The care manager should be able to access the billing chart and update it with the proper amount due, along with a pay by date.
+10. Create Billing Chart / Table for Case Manager Side
+    * As a Case Manager, I should be able to update billing information for patients for their recent visits.
+    * The case manager should be able to access the billing chart and update it with the proper amount due, along with a pay by date.
     * 2 Story Points
-8. Create an Easily Accessible Contact Card for the Patient
-    * As a patient, I should be able to contact my care manager through email, phone, or direct comments on the portal.
-    * Patients should have an icon near the top of the page with an email icon linking to the CM’s email, a phone icon linking to the CM’s phone number, and a comments tab with a notification circle where the patients can see any new comments to be opened.
-    * 1 Story Point
-9. Create Visits Calendar for Patient
-    * As a Patient, I should be able to view progress from recent visits and view upcoming visits in my dashboard.
-    * The patient should have a calendar where they can see every visit in the previous days / months and they can also see upcoming visits.
+11. Create Visits Calendar for Agency Staff
+    * As an Agency Manager, I should be able to view progress from recent visits and view upcoming visits for a patient.
+    * The agenecy manager should have a calendar where they can see every visit in the previous days / months and they can also see upcoming visits for the selected patient.
     * They should also be able to click on the previous visits for any new information and they should be able to click on the future visits for information such as doctor, time, etc.
     * 3 Story Points
-10. Develop Prescription View for Patient
-    * As a Patient, I should be able to view prescription information.
-    * There should be a prescription chart with the drug’s date, label # and name and expiration date easily accessible to the patient, and the patient should also have a comments tab to comment on any adverse reactions or side effects.
+12. Develop Prescription View for Agency Staff
+    * As an Agency Manager, I should be able to view a patient's prescription information.
+    * There should be a prescription chart with the drug’s date, label # and name and expiration date easily accessible to the agency manager.
     * 1 Story Point
-11. Develop Exit Plan View for Patient
-    * As a Patient, I should be able to view exit plan information.
-    * The patient should see an option on their dashboard labeled exit plan information.
-    * The patient should be able to click on this and access a new view that displays the exit plan information laid out by the care manager.
+13. Develop Exit Plan View for Agency Staff
+    * As an Agency Manager, I should be able to view a patient's exit plan information.
+    * The agency manager should see an option on their dashboard labeled exit plan information.
+    * The agency manager should be able to click on this and access a new view that displays the exit plan information laid out by the case manager.
     * 1 Story Point
-12. Create General Account View for Patient Dashboard
-    * As a Patient, I should be able to view social, family, health history, and clinical quality management measures.
-    * The Patient Dashboard should include a section for a general account view that the patient can click on to view more details.
-    * When clicked, patients should be redirected to a new panel displaying the following: social, family, health history, and clinical quality management measures.
+14. Create General Account View for Patient Dashboard
+    * As an Agency Manager, I should be able to view social, family, health history, and clinical quality management measures for a patient.
+    * The patient view dashboard should include a section for a general account view that the agency manager can click on to view more details.
+    * When clicked, the agency manager should be redirected to a new panel displaying the following: social, family, health history, and clinical quality management measures.
     * 3 Story Points
-13. Create Billing View/Page on Patient Dashboard
-    * As a Patient, I should be able to view billing information from recent visits in my dashboard.
-    * The patient should be able to go to the dashboard and view billing information based on the corresponding dates from the calendar.
+15. Create Billing View/Page on Patient Dashboard
+    * As an Agency Manager, I should be able to view billing information from recent visits in my dashboard.
+    * The agency manager should be able to go to the dashboard and view billing information based on the corresponding dates from the calendar.
     * 2 Story Points
 
 ## Relative Size Estimating
