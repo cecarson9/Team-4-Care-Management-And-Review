@@ -4,8 +4,8 @@
 - Christopher Carson, _Product Manager/Business Analyst_
 - Matthew Morena, _Data Architect_
 - Himanshu Tomar, _UI/UX Development_
-- Devansh Guduri, _Microservices Developer_
-- Sanjana Kancharla, _Quality & Dev Ops_
+- Devansh Guduri, _Quality & Dev Ops_
+- Sanjana Kancharla, _Microservices Developer_  
 
 ## Product Vision
 ### Far Vision
